@@ -1,0 +1,42 @@
+﻿@model List<CarBook.EntityLayer.Concrete.Car>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>Index</h1>
+
+
+<table class="table table-bordered">
+	<tr>
+		<th>#</th>
+		<th>Model</th>
+		<th>Kategori</th>
+		<th>Marka</th>
+		<th>Vites</th>
+		<th>Yıl</th>
+		<th>Araba</th>
+		<th>Sil</th>
+		<th>Güncelle</th>
+		<th>Araba Detayları</th>
+		<th>Sitede Gör</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>@item.CarID</td>
+			<td>@item.Model</td>
+			<td>@item.CarCategoryID</td>
+			<td>@item.BrandID</td>
+			<td>@item.GearType</td>
+			<td>@item.Year</td>
+			<td>@item.CarStatusID</td>
+			<td><a href="/Car/DeleteCar/@item.CarID" class="btn btn-outline-danger">Sil</a></td>
+			<td><a href="/Car/UpdateCar/@item.CarID" class="btn btn-outline-success">Güncelle</a></td>
+			<td><a href="#" class="btn btn-outline-dark">Araba Detayları</a></td>
+			<td><a href="#" class="btn btn-outline-warning">Sitede Gör</a></td>
+		</tr>
+	}
+</table>
+<a href="/Car/AddCar/" class="btn btn-outline-primary">Yeni Araba Ekle</a>

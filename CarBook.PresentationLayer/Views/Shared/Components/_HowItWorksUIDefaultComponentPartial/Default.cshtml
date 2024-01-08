@@ -1,0 +1,22 @@
+﻿@model List<HowItWorksStep>
+@{
+    int i = 0;
+}
+<div class="container site-section mb-5">
+    <div class="row justify-content-center text-center">
+        <div class="col-7 text-center mb-5">
+            <h2>Sistem Nasıl Çalışır</h2>
+            <p>Hemen birkaç adımda istediğin aracı isteedğin lokasyondan kolayca kirala!</p>
+        </div>
+    </div>
+    <div class="how-it-works d-flex">
+        @foreach (var item in Model)
+        {
+            i++;
+            <div class="step">
+                <span class="number"><span>@i</span></span>
+                <span class="caption">@item.Description</span>
+            </div>
+        }
+    </div>
+</div>

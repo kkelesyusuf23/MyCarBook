@@ -1,0 +1,52 @@
+﻿﻿<!-- Default.cshtml -->
+@model CarBook.EntityLayer.Concrete.Car
+
+<div class="ftco-blocks-cover-1">
+
+    <div class="ftco-cover-1 overlay" style="background-image: url('/carrent-master/images/hero_1.jpg')">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            @TempData["SuccessMessage"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div> 
+                    }
+
+                    <div class="feature-car-rent-box-1">
+                        <h3>Araç Kirala</h3>
+
+                        <!-- Filtreleme formu -->
+                        <form asp-controller="UIDefault" asp-action="Index" method="post">
+                            <div class="form-group">
+                                <div style="display: flex; align-items: center;">
+                                    <select asp-for="BrandID" asp-items="@ViewBag.BrandsList" class="form-control"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div style="display: flex; align-items: center;">
+                                    <select asp-for="CarCategoryID" asp-items="@ViewBag.CarCategoryList" class="form-control"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div style="display: flex; align-items: center;">
+                                    <select asp-for="GearType" asp-items="@ViewBag.GearTypeList" class="form-control"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div style="display: flex; align-items: center;">
+                                    <select asp-for="Year" asp-items="@ViewBag.YearList" class="form-control"></select>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center bg-light p-3">
+                                <button type="submit" class="btn btn-primary" style="width:100%">Filtrele</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

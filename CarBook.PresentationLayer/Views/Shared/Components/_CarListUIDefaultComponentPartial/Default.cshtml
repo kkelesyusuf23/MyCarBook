@@ -1,0 +1,62 @@
+﻿@model List<Car>
+
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <h3>En Beğenilen Araçlarımız</h3>
+                <p class="mb-4">Konforlu ve şık araçlarımızla seyahat etmenin keyfini çıkarın.</p>
+                <p>
+                    <a href="#" class="btn btn-primary custom-prev">Önceki</a>
+                    <span class="mx-2">/</span>
+                    <a href="#" class="btn btn-primary custom-next">Sonraki</a>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <div class="nonloop-block-13 owl-carousel">
+                    @foreach (var item in Model)
+                    {
+                        <div class="item-1">
+                            <a href="#"><img src="@item.ImageURL" alt="Image" class="img-fluid" style="height:250px"></a>
+                            <div class="item-1-contents">
+                                <div class="text-center">
+                                    <h3><a href="#">@item.Brand.BrandName @item.Model</a></h3>
+                                    <div class="rating">
+                                        <span class="icon-star text-warning"></span>
+                                        <span class="icon-star text-warning"></span>
+                                        <span class="icon-star text-warning"></span>
+                                        <span class="icon-star text-warning"></span>
+                                        <span class="icon-star text-warning"></span>
+                                    </div>
+                                    <div class="rent-price"><span>₺ @item.DailyPrice/</span>tipi</div>
+                                </div>
+                                <ul class="specs">
+                                    <li>
+                                        <span>Model Yılı</span>
+                                        <span class="spec">@item.Year</span>
+                                    </li>
+                                    <li>
+                                        <span>Kişi Sayısı</span>
+                                        <span class="spec">@item.PersonCount</span>
+                                    </li>
+                                    <li>
+                                        <span>Vites Türü</span>
+                                        <span class="spec">@item.GearType</span>
+                                    </li>
+                                    <li>
+                                        <span>Kilometre</span>
+                                        <span class="spec">@item.km</span>
+                                    </li>
+                                </ul>
+                                <div class="d-flex action">
+                                    <a href="/UICar/CarRant/@item.CarID" class="btn btn-primary">Şimdi Kirala</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

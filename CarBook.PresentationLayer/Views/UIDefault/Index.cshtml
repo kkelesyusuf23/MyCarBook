@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+@await Component.InvokeAsync("_FilterUIDefaultComponentPartial")
+
+@await Component.InvokeAsync("_RangeFilterUIDefaultComponentPartial")
+
+@await Component.InvokeAsync("_CarListUIDefaultComponentPartial")
+    
+@await Component.InvokeAsync("_ServicesUIDefaultComponentPartial")
+
+@await Component.InvokeAsync("_HowItWorksUIDefaultComponentPartial")
+
+@await Component.InvokeAsync("_TestimonialUIDefaultComponentPartial")   

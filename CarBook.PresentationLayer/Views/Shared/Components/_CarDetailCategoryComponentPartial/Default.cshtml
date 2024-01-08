@@ -1,0 +1,11 @@
+﻿@model List<CarCategory>
+
+<div class="sidebar-box">
+    <div class="categories">
+        <h3>Kategoriler</h3>
+        @foreach(var item in Model)
+        {
+            <li><a href="#">@item.CategoryName <span>@ViewBag.count</span></a></li>
+        }
+    </div>
+</div>

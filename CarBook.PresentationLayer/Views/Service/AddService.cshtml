@@ -1,0 +1,23 @@
+﻿@model Service
+@{
+    ViewData["Title"] = "AddService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>AddService</h1>
+
+<form method="post">
+    <label>İkon</label>
+    <input type="text" asp-for="Icon" class="form-control"/>
+    <span asp-validation-for="Icon"class="text-danger"></span>
+    <br />
+    <label>Başlık</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <span asp-validation-for="Title" class="text-danger"></span>
+    <br />
+    <label>Açıklama</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <span asp-validation-for="Description" class="text-danger"></span>
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>

@@ -1,0 +1,26 @@
+﻿@model List<Service>
+<div class="site-section section-3" style="background-image: url('/carrent-master/images/hero_2.jpg');">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center mb-5">
+				<h2 class="text-white">Hizmetlerimiz</h2>
+			</div>
+		</div>
+		<div class="row">
+			@foreach (var item in Model)
+			{
+				<div class="col-lg-4">
+					<div class="service-1">
+						<span class="service-1-icon">
+							<span class="@item.Icon"></span>
+						</span>
+						<div class="service-1-contents">
+							<h3>@item.Title</h3>
+							<p>@item.Description</p>
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>

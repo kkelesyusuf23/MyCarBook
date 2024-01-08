@@ -1,0 +1,11 @@
+﻿@model List<Car>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+@await Component.InvokeAsync("_FeatureUICarComponentPartial")
+
+@await Component.InvokeAsync("_CarUICarComponentPartial")
+
+@await Component.InvokeAsync("_HowItWorksStepComponentPartial")

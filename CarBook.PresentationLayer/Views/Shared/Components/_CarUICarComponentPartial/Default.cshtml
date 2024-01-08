@@ -1,0 +1,57 @@
+﻿@model List<Car>
+
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="item-1">
+                        <a href="#"><img src="@item.ImageURL" alt="Image" class="img-fluid" style="height:250px"></a>
+                        <div class="item-1-contents">
+                            <div class="text-center">
+                                <h3><a href="#">@item.Brand.BrandName @item.Model</a></h3>
+                                <div class="rating">
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                    <span class="icon-star text-warning"></span>
+                                </div>
+                                <div class="rent-price"><span>₺@item.DailyPrice/</span>gün</div>
+                            </div>
+                            <ul class="specs">
+                                <li>
+                                    <span>Model Yılı</span>
+                                    <span class="spec">@item.Year</span>
+                                </li>
+                                <li>
+                                    <span>Kişi Sayısı</span>
+                                    <span class="spec">@item.PersonCount</span>
+                                </li>
+                                <li>
+                                    <span>Vite Türü</span>
+                                    <span class="spec">@item.GearType</span>
+                                </li>
+                                <li>
+                                    <span>Kilometre</span>
+                                    <span class="spec">@item.km</span>
+                                </li>
+                            </ul>
+                            <div class="d-flex action">
+                                <a href="/UICar/CarRant/@item.CarID" class="btn btn-primary">Hemen Kirala</a>
+                                <a href="/Car/CarDetail/@item.CarID" class="btn btn-warning" style="margin-left:10px">Araç Detayları</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="col-12">
+                <span class="p-3">1</span>
+                <a href="#" class="p-3">2</a>
+                <a href="#" class="p-3">3</a>
+                <a href="#" class="p-3">4</a>
+            </div>
+        </div>
+    </div>
+</div>

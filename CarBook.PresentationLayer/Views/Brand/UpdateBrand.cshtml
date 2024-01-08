@@ -1,0 +1,16 @@
+﻿@model CarBook.EntityLayer.Concrete.Brand
+@{
+    ViewData["Title"] = "UpdateBrand";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>UpdateBrand</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="BrandID"/>
+    <br />
+    <label>Marka Adı</label>
+    <input type="text" asp-for="BrandName" class="form-control" style="border:1px solid #222" />
+    <br />
+    <button class="btn btn-outline-primary">Güncelle</button>
+</form>

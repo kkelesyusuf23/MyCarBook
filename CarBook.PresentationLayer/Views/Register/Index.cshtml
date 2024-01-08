@@ -1,0 +1,70 @@
+﻿@model RegisterViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="~/colorlib-regform-8/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="~/colorlib-regform-8/css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form">
+                        <h2 class="form-title">Hesap Oluşturun</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" asp-for="Name" placeholder="Adınız" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" asp-for="Surname" placeholder="Soyadınız" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" asp-for="Username" placeholder="Kullanıcı Adınız" />
+                        </div>
+                        <div class="form-group">    
+                            <input type="email" class="form-input" asp-for="Email" placeholder="Mail Adresiniz" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" required asp-for="Password" placeholder="Şifreniz" />
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>Kabul Ediyorum  <a href="#" class="term-service">Kullanım Şartlarını Okudum</a></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="form-submit" value="Kayıt Ol" />
+                        </div>
+                        <div class="text-danger" asp-validation-summary="ModelOnly">
+
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                        Have already an account ? <a href="#" class="loginhere-link">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="~/colorlib-regform-8/vendor/jquery/jquery.min.js"></script>
+    <script src="~/colorlib-regform-8/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

@@ -1,0 +1,25 @@
+﻿@model List<CarBook.EntityLayer.Concrete.Brand>
+@{
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<table class="table table-bordered">
+	<tr>
+		<th>#</th>
+		<th>Marka Adı</th>
+		<th>Durum</th>
+		<th>Sil</th>
+		<th>Güncelle</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>@item.BrandID</td>
+			<td>@item.BrandName</td>
+			<td>@item.Status</td>
+			<td><a href="/Brand/DeleteBrand/@item.BrandID" class="btn btn-outline-danger">Sil</a></td>
+			<td><a href="/Brand/UpdateBrand/@item.BrandID" class="btn btn-outline-success">Güncelle</a></td>
+		</tr>
+	}
+</table>
+<a href="/Brand/AddBrand/" class="btn btn-outline-primary">Yeni Marka Ekle</a>

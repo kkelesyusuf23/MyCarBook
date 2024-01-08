@@ -1,0 +1,27 @@
+﻿@model List<Testimonial>
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-7 text-center mb-5">
+                <h2>Müşteri Geri Dönüşleri</h2>
+                <p>Müşterinin yağlandırma işlemine dikkat etmesi çok önemlidir. Onun acıları ve zevkleri dışında hiç kimse varsayılamaz!</p>
+            </div>
+        </div>
+        <div class="row">
+            @foreach(var item in Model)
+            {
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="testimonial-2">
+                        <blockquote class="mb-4">
+                            <p>"@item.Description"</p>
+                        </blockquote>
+                        <div class="d-flex v-card align-items-center">
+                            <img src="@item.ImageURL" alt="Image" class="img-fluid mr-3">
+                            <span>@item.NameSurname</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
