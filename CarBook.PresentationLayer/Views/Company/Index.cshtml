@@ -1,0 +1,33 @@
+﻿@model List<CarBook.EntityLayer.Concrete.Company>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div style="height: 550px; overflow-x: hidden; overflow-y: scroll;">
+
+	<table class="table table-bordered">
+		<tr>
+			<th>#</th>
+			<th>Açıklama</th>
+			<th>Alt Açıklama</th>
+			<th>Resim</th>
+			<th>Sil</th>
+			<th>Güncelle</th>
+		</tr>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.CompanyID</td>
+				<td>@item.Description1</td>
+				<td>@item.Description2</td>
+				<td>@item.ImageURL</td>
+				<td><a href="/Company/DeleteCompany/@item.CompanyID" class="btn btn-outline-danger">Sil</a></td>
+				<td><a href="/Company/DeleteCompany/@item.CompanyID" class="btn btn-outline-success">Güncelle</a></td>
+			</tr>
+		}
+	</table>
+</div>
+<br />
+<a href="/Company/AddCompany/" class="btn btn-outline-primary">Yeni Şirket Bilgisi Ekle</a>
+

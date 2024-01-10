@@ -1,0 +1,25 @@
+﻿@model CarBook.EntityLayer.Concrete.CarDetail
+
+@{
+    ViewData["Title"] = "UpdateCarDetail";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="CarDetailID" />
+    <label>Kullanıcı</label>
+    <select asp-for="AppUserID" class="form-control" style="border:1px solid #222">
+        @foreach (var user in ViewBag.users)
+        {
+            <option value="@user.Id">@user.UserName</option>
+        }
+    </select>    <br />
+    <label for="CarID">Araba Seç:</label>
+    @Html.DropDownList("CarID", (IEnumerable<SelectListItem>)ViewBag.v, new { @class = "form-control", style = "border:1px solid #222" })
+    <label>Açıklama</label>
+    <input type="text" asp-for="Description" class="form-control" style="border:1px solid #222" />
+    <br />
+    <input type="hidden" asp-for="CreatedTime" value="@DateTime.Now" />
+    <button class="btn btn-outline-primary">Kaydet</button>
+</form>
+

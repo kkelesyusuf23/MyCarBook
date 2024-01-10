@@ -1,0 +1,30 @@
+﻿@model List<CarBook.EntityLayer.Concrete.Comment>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div style="height: 550px; overflow-x: hidden; overflow-y: scroll;">
+
+	<table class="table table-bordered">
+		<tr>
+			<th>#</th>
+			<th>Ad Soyad</th>
+			<th>Araba</th>
+			<th>Açıklama</th>
+			<th>Oluşturulma Tarihi</th>
+			<th>Sil</th>
+		</tr>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.CommentID</td>
+				<td>@item.NameSurname</td>
+				<td>@item.CarID</td>
+				<td>@item.Description</td>
+				<td>@item.CreatedTime</td>
+				<td><a href="/Comment/DeleteComment/@item.CommentID" class="btn btn-outline-danger">Sil</a></td>
+			</tr>
+		}
+	</table>
+</div>

@@ -1,0 +1,31 @@
+﻿@model CarBook.EntityLayer.Concrete.CarRant
+@{
+    ViewData["Title"] = "UpdateCarRant";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="CarRantID" />
+    <label for="CarID">Araba Seç:</label>
+    @Html.DropDownList("CarID", (IEnumerable<SelectListItem>)ViewBag.v, new { @class = "form-control", style = "border:1px solid #222" })
+    <label>Ad Soyad</label>
+    <input type="text" asp-for="FullName" class="form-control" style="border:1px solid #222" />
+    <br />
+    <label>Mail Adresi</label>
+    <input type="text" asp-for="Email" class="form-control" style="border:1px solid #222" />
+    <br />
+    <div class="mb-3 row">
+        <div class="col-md-6">
+            <label for="startDate" class="form-label">Start Date</label>
+            <input type="date" class="form-control" id="startDate" name="startDate" required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="endDate" class="form-label">End Date</label>
+            <input type="date" class="form-control" id="endDate" name="endDate" required>
+        </div>
+    </div>
+    <button class="btn btn-outline-primary">Kaydet</button>
+</form>
+
+

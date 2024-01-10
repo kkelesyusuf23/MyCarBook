@@ -1,0 +1,31 @@
+﻿@model List<CarBook.EntityLayer.Concrete.ContactInfo>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div style="height: 550px; overflow-x: hidden; overflow-y: scroll;">
+
+	<table class="table table-bordered">
+		<tr>
+			<th>#</th>
+			<th>Başlık</th>
+			<th>Açıklama</th>
+			<th>Sil</th>
+			<th>Güncelle</th>
+		</tr>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.ContactInfoID</td>
+				<td>@item.Title</td>
+				<td>@item.Description</td>
+				<td><a href="/ContactInfo/DeleteContactInfo/@item.ContactInfoID" class="btn btn-outline-danger">Sil</a></td>
+				<td><a href="/ContactInfo/UpdateContactInfo/@item.ContactInfoID" class="btn btn-outline-success">Güncelle</a></td>
+			</tr>
+		}
+	</table>
+</div>
+<br />
+<a href="/ContactInfo/AddContactInfo/" class="btn btn-outline-primary">Yeni Araba Detayı Ekle</a>
+

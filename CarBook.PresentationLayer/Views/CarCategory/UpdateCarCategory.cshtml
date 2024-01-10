@@ -1,0 +1,18 @@
+﻿@model CarBook.EntityLayer.Concrete.CarCategory
+@{
+    ViewData["Title"] = "UpdateCarCategory";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="CarCategoryID" />
+    <br />
+    <label>Kasa Tipi</label>
+    <input type="text" asp-for="CategoryName" class="form-control" style="border:1px solid #222" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" asp-for="Description" class="form-control" style="border:1px solid #222" />
+    <br />
+    <button class="btn btn-outline-primary">Güncelle</button>
+</form>
+

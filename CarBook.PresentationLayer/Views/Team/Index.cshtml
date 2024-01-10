@@ -1,0 +1,33 @@
+﻿@model List<CarBook.EntityLayer.Concrete.Team>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div style="height: 550px; overflow-x: hidden; overflow-y: scroll;">
+
+	<table class="table table-bordered">
+		<tr>
+			<th>#</th>
+			<th>Ad Soyad</th>
+			<th>Açıklama</th>
+			<th>Resim</th>
+			<th>Sil</th>
+			<th>Güncelle</th>
+		</tr>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.TeamID</td>
+				<td>@item.NameSurname</td>
+				<td>@item.Description</td>
+				<td><img src="@item.ImageURL"  style="width:50px; height:50px"/></td>
+				<td><a href="/Team/DeleteTeam/@item.TeamID" class="btn btn-outline-danger">Sil</a></td>
+				<td><a href="/Team/UpdateTeam/@item.TeamID" class="btn btn-outline-success">Güncelle</a></td>
+			</tr>
+		}
+	</table>
+</div>
+<br />
+<a href="/Team/AddTeam/" class="btn btn-outline-primary">Yeni Ekip Üyesi Ekle</a>
+
