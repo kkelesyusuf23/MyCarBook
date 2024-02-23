@@ -29,7 +29,7 @@ This project represents a comprehensive Rent a Car application developed within 
 - Fluent Validation
 - ViewComponent
 
-## Key Features 🌟
+## Key Features 
 
 - **User-Friendly Filtering:** Provides users with the ability to explore vehicle details with customized filtering options.
 - **Vehicle Review with Comments:** Enables users to evaluate vehicles and make comments, facilitating vehicle selection with reliable reviews.
