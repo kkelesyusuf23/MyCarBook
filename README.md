@@ -83,13 +83,13 @@ Under the guidance of our esteemed instructor, Murat Yücedağ, at M&Y Software 
 ![293520921-e8dc8207-181f-461e-a0d9-0e4084bb123d](https://github.com/kkelesyusuf23/MyCarBook/assets/148692615/56d9282f-5f2a-4881-943b-732462d7c628)
 ![293520926-e905c544-03f6-47f9-8fb7-49637c77799b](https://github.com/kkelesyusuf23/MyCarBook/assets/148692615/08baca83-efdd-4df0-aa8b-26d997f18c4a)
 
-
+![293520874-a2ee7935-8494-4cdf-915d-9584ad1ab16a](https://github.com/kkelesyusuf23/MyCarBook/assets/148692615/7c27a852-a461-438a-abe0-cb2e55eba214)
 ![293520860-40d1eff6-ecf9-4b33-ba7f-394e5a319f58](https://github.com/kkelesyusuf23/MyCarBook/assets/148692615/faa2ba90-ef23-4b68-8e06-5fdad6f39ffb)
 ![293520905-ad22c2ce-9070-45eb-b65f-4b18e3cfd361](https://github.com/kkelesyusuf23/MyCarBook/assets/148692615/7453b1c1-8c18-4793-a7c8-2d2a0b02d9be)
 ![293520904-76bfe300-1bcf-4cd6-82a3-20c7f816f7ed](https://github.com/kkelesyusuf23/MyCarBook/assets/148692615/b348b14e-c26c-4746-a127-f6073f5fb272)
 ![293520900-0dcf605b-bbdd-4d4d-a1f5-1476db289adb](https://github.com/kkelesyusuf23/MyCarBook/assets/148692615/c9efaa75-a499-4263-8dcc-270ea8d4027d)
 ![293520895-5eb72ac4-723b-4f13-82ac-dd3a2d3c86b4](https://github.com/kkelesyusuf23/MyCarBook/assets/148692615/d372f2bd-4114-4be7-9432-9b286d8b77b3)
-![293520874-a2ee7935-8494-4cdf-915d-9584ad1ab16a](https://github.com/kkelesyusuf23/MyCarBook/assets/148692615/7c27a852-a461-438a-abe0-cb2e55eba214)
+
 
 ![293520895-5eb72ac4-723b-4f13-82ac-dd3a2d3c86b4](https://github.com/kkelesyusuf23/MyCarBook/assets/148692615/a56bd453-270b-4352-a467-629c8492750e)
 ![293520892-52968026-d111-4b3c-a26d-776118f83028](https://github.com/kkelesyusuf23/MyCarBook/assets/148692615/e8dca967-e591-4b87-b321-5da0c67fb9c7)
